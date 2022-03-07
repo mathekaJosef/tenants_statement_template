@@ -37,7 +37,7 @@
     $phoneNumber = $json->Body->stkCallback->CallbackMetadata->Item[4]->Value;
 
     $status = "1";
-    // $date_reg = date('Y-m-d H:i:s');
+    //$date_reg = date('Y-m-d H:i:s');
 
     $sql = mysqli_query($con, "INSERT INTO mpesa_responses (merchantRequestid, checkoutRequestid, resultCode, resultDesc, amount, mpesaReceiptNumber, transactionDate, phoneNumber, content_id, premium_amount, app_section)
     VALUES('$merchantRequestID', '$checkoutRequestID', '$resultCode', '$resultDesc', '$amount', '$mpesaReceiptNumber', '$transactionDate', '$phoneNumber', '$content_id', '$premium_amount', '$app_section')");
